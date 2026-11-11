@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 сайтов для заведений Челябинска | Каталог проектов</title>
+    <meta name="description" content="Каталог из 20 современных веб-сайтов, созданных для реальных локальных заведений и малого бизнеса Челябинска без собственных сайтов.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9;
+            --dark: #0f172a;
+            --dark-card: #1e293b;
+            --bg-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+            --card-shadow-hover: 0 20px 30px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.06);
+            --radius-xl: 24px;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero */
+        .portal-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0c4a6e 100%);
+            color: white;
+            padding: 80px 24px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .portal-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(56, 189, 248, 0.15), transparent 40%),
+                        radial-gradient(circle at 20% 80%, rgba(129, 140, 248, 0.15), transparent 40%);
+            pointer-events: none;
+        }
+        .hero-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #38bdf8;
+            margin-bottom: 24px;
+        }
+        .portal-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .portal-hero h1 span {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .portal-hero p.lead {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 780px;
+            margin: 0 auto 36px;
+            font-weight: 400;
+        }
+
+        /* Stats */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 16px 28px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            flex: 1;
+            min-width: 180px;
+        }
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+        }
+        .stat-label {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Main Container */
+        .portal-container {
+            max-width: 1240px;
+            margin: -40px auto 80px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Search & Filter bar */
+        .filter-panel {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 24px 30px;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+        .search-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            flex: 1;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            font-size: 1rem;
+            font-family: inherit;
+            background: #f8fafc;
+            transition: var(--transition);
+        }
+        .search-box input:focus {
+            outline: none;
+            background: white;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        /* Category tabs */
+        .categories-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .cat-btn {
+            background: #f1f5f9;
+            color: #475569;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .cat-btn:hover {
+            background: #e2e8f0;
+            color: var(--text-dark);
+        }
+        .cat-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        /* Grid */
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 30px;
+        }
+
+        /* Establishment Card */
+        .site-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .site-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--card-shadow-hover);
+            border-color: #cbd5e1;
+        }
+        .card-top {
+            padding: 24px 24px 16px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .cat-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: #f1f5f9;
+            color: #475569;
+        }
+        .rating-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #fef08a;
+            color: #854d0e;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        .card-tagline {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        .card-body {
+            padding: 20px 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #fcfcfd;
+        }
+        .card-info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: #334155;
+        }
+        .card-info-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .card-services-preview {
+            margin-top: 8px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            font-size: 0.82rem;
+        }
+        .preview-header {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .preview-list {
+            list-style: none;
+            color: #64748b;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .preview-list li {
+            display: flex;
+            justify-content: space-between;
+        }
+        .preview-price {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* Card Footer */
+        .card-footer {
+            padding: 18px 24px;
+            background: white;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 12px;
+        }
+        .btn-view-site {
+            flex: 1;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 11px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .btn-view-site:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .btn-preview {
+            background: #f8fafc;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            padding: 11px 16px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-preview:hover {
+            background: #e2e8f0;
+        }
+
+        /* Quick View Modal with iframe */
+        .preview-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .preview-modal.active {
+            display: flex;
+        }
+        .preview-modal-inner {
+            background: white;
+            border-radius: var(--radius-xl);
+            width: 100%;
+            max-width: 1140px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .preview-modal-bar {
+            padding: 14px 24px;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .preview-modal-title {
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .preview-bar-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-open-tab {
+            color: #38bdf8;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+        .btn-close-modal {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .btn-close-modal:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .preview-iframe {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+            background: white;
+        }
+
+        /* Footer */
+        .portal-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .portal-footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .portal-hero h1 {
+                font-size: 2.2rem;
+            }
+            .search-row {
+                flex-direction: column;
+            }
+            .sites-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <header class="portal-hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span>📍</span> Челябинск • Инициатива веб-разработки для локального бизнеса
+            </div>
+            <h1>20 заведений Челябинска, получивших <span>новые сайты</span></h1>
+            <p class="lead">
+                Мы нашли реальные челябинские места без собственных веб-ресурсов (работающие только через 2ГИС или VK) и создали для каждого из них полноценный, адаптированный под мобильные устройства сайт.
+            </p>
+
+            <div class="stats-bar">
+                <div class="stat-card">
+                    <div class="stat-num">20</div>
+                    <div class="stat-label">Готовых сайтов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Мобильная адаптивность</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">7</div>
+                    <div class="stat-label">Районов Челябинска</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">0 ₽</div>
+                    <div class="stat-label">Зависимостей (Чистый код)</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="portal-container">
+        
+        <!-- Filter & Search -->
+        <div class="filter-panel">
+            <div class="search-row">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Поиск по названию, улице или услуге (например: Ленина, торт, стрижка, шиномонтаж)..." oninput="filterSites()">
+                </div>
+            </div>
+
+            <div class="categories-tabs">
+                <button class="cat-btn active" onclick="setCategory('all', this)">Все заведения (20)</button>
+                <button class="cat-btn" onclick="setCategory('food', this)">☕ Кафе, бары и пекарни (5)</button>
+                <button class="cat-btn" onclick="setCategory('craft', this)">🎨 Творчество и ателье (5)</button>
+                <button class="cat-btn" onclick="setCategory('beauty', this)">✂️ Красота и стиль (2)</button>
+                <button class="cat-btn" onclick="setCategory('auto', this)">🚗 Автосервисы и ремонт (3)</button>
+                <button class="cat-btn" onclick="setCategory('pets', this)">🐾 Животные и ветпомощь (2)</button>
+                <button class="cat-btn" onclick="setCategory('health', this)">🧘 Спорт и йога (1)</button>
+                <button class="cat-btn" onclick="setCategory('flowers', this)">💐 Цветы и флористика (1)</button>
+                <button class="cat-btn" onclick="setCategory('kids', this)">👶 Дети и продленка (1)</button>
+            </div>
+        </div>
+
+        <!-- Grid of Sites -->
+        <div class="sites-grid" id="sitesGrid">
+            
+        <div class="site-card" data-category="food">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">☕ Кафе & Кофейни</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">1. Кофейня и книжный клуб «Шмульберк»</h3>
+                <p class="card-tagline">Уютная камерная кофейня со спешелти-кофе, свежей выпечкой и живым книжным клубом в центре Челябинска</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Тимирязева, 29</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Рядом с Театральной площадью</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Пт: 08:00 – 21:00 | Сб-Вс: 09:00 – 22:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 220-41-18</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8001" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8001</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Фильтр-кофе Эфиопия Иргачефф</span>
+                <span class="preview-price">210 ₽</span>
+            </li>
+            
+            <li>
+                <span>Сырники из фермерского творога</span>
+                <span class="preview-price">340 ₽</span>
+            </li>
+            
+            <li>
+                <span>Круассан с лососем и гуакамоле</span>
+                <span class="preview-price">420 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8001" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8001 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/01-shmulberk.html', 'Кофейня и книжный клуб «Шмульберк»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="food">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">☕ Кафе & Рестораны</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">2. Городское кафе «Ланчерия»</h3>
+                <p class="card-tagline">Знаменитые бельгийские вафли, сытные городские ланчи и эстетика уюта на Советской</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Советская, 38а</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Исторический центр, в двух шагах от ул. Труда</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Ежедневно: 09:00 – 22:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 776-88-25</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8002" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8002</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Вафля с камчатским крабом и авокадо</span>
+                <span class="preview-price">680 ₽</span>
+            </li>
+            
+            <li>
+                <span>Вафля «Бенедикт» со слабосоленой семгой</span>
+                <span class="preview-price">520 ₽</span>
+            </li>
+            
+            <li>
+                <span>Сладкая вафля с маскарпоне и ягодами</span>
+                <span class="preview-price">430 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8002" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8002 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/02-lancheria.html', 'Городское кафе «Ланчерия»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="craft">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🎨 Творчество & Досуг</span>
+                    <span class="rating-pill">★ 5.0</span>
+                </div>
+                <h3 class="card-title">3. Творческая студия & кофейня «Я так вижу»</h3>
+                <p class="card-tagline">Гончарный круг, лепка из глины, арт-свидания и спешелти-кофе в сердце ЖК «Ньютон»</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Героя России Родионова, 13</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Микрорайон Ньютон, вход со стороны бульвара</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Вт-Вс: 10:00 – 21:00 (Пн — выходной)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (908) 571-33-02</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8003" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8003</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Мастер-класс «Гончарный круг»</span>
+                <span class="preview-price">2 100 ₽</span>
+            </li>
+            
+            <li>
+                <span>Арт-свидание за гончарным кругом для двоих</span>
+                <span class="preview-price">4 800 ₽</span>
+            </li>
+            
+            <li>
+                <span>Ручная лепка: ботанический рельеф</span>
+                <span class="preview-price">1 900 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8003" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8003 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/03-ya-tak-vizhu.html', 'Творческая студия & кофейня «Я так вижу»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="food">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">☕ Кондитерские & Выпечка</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">4. Крафтовая кондитерская «Klukwa»</h3>
+                <p class="card-tagline">Натуральные десерты, 16 вкусов макаронс и авторские торты ручной работы на Северо-Западе</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. 40-летия Победы, 57</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Ориентир — перекресток с Комсомольским пр.</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Ежедневно: 09:00 – 21:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 750-19-88</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8004" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8004</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Набор макаронс (8 шт на выбор)</span>
+                <span class="preview-price">1 080 ₽</span>
+            </li>
+            
+            <li>
+                <span>Торт «Малиновый бархат» (1.5 кг)</span>
+                <span class="preview-price">3 200 ₽</span>
+            </li>
+            
+            <li>
+                <span>Торт «Фундук-Пралине» (1.8 кг)</span>
+                <span class="preview-price">3 900 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8004" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8004 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/04-klukwa.html', 'Крафтовая кондитерская «Klukwa»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="craft">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🎨 Ремесло & Студии</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">5. Гончарная мастерская «Фабрика»</h3>
+                <p class="card-tagline">Пространство современной керамики, коворкинг для мастеров и школа гончарного искусства</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Свободы, 2</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Креативный кластер в центре, напротив парка</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Вс: 11:00 – 22:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 248-12-70</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8005" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8005</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Базовый курс «Основы гончарного дела» (8 занятий)</span>
+                <span class="preview-price">14 500 ₽</span>
+            </li>
+            
+            <li>
+                <span>Разовый мастер-класс «Кружка или тарелка»</span>
+                <span class="preview-price">2 300 ₽</span>
+            </li>
+            
+            <li>
+                <span>Коворкинг для керамистов (аренда места 1 день)</span>
+                <span class="preview-price">900 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8005" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8005 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/05-fabrika-ceramics.html', 'Гончарная мастерская «Фабрика»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="beauty">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">✂️ Барбершопы & Уход</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">6. Барбершоп «BARBERDRIVER»</h3>
+                <p class="card-tagline">Мужской характер, безупречный стиль стрижек и бритья в историческом районе Челябинска</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Российская, 222</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Перекресток улиц Российская и Могильникова</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Ежедневно: 10:00 – 21:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (951) 808-12-22</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8006" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8006</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Мужская стрижка (ножницы + машинка)</span>
+                <span class="preview-price">1 400 ₽</span>
+            </li>
+            
+            <li>
+                <span>Моделирование и стрижка бороды</span>
+                <span class="preview-price">900 ₽</span>
+            </li>
+            
+            <li>
+                <span>Комплекс «Стрижка + Борода»</span>
+                <span class="preview-price">2 000 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8006" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8006 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/06-barberdriver.html', 'Барбершоп «BARBERDRIVER»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="auto">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🚗 Автосервисы & Ремонт</span>
+                    <span class="rating-pill">★ 4.8</span>
+                </div>
+                <h3 class="card-title">7. Автосервис & ТО «2BRO AUTO»</h3>
+                <p class="card-tagline">Честный ремонт автомобилей, диагностика и плановое ТО с гарантией 12 месяцев в Челябинске</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, Копейское шоссе, 36а</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Ленинский район, удобный заезд с первой линии</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Сб: 09:00 – 20:00 (Вс: по записи)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 217-05-55</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8007" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8007</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Комплексная диагностика авто по 45 параметрам</span>
+                <span class="preview-price">990 ₽</span>
+            </li>
+            
+            <li>
+                <span>Аппаратная замена масла в ДВС + фильтр</span>
+                <span class="preview-price">700 ₽</span>
+            </li>
+            
+            <li>
+                <span>Ремонт ходовой части и замена рычагов</span>
+                <span class="preview-price">от 800 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8007" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8007 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/07-2bro-auto.html', 'Автосервис & ТО «2BRO AUTO»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="beauty">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">✂️ Тату & Пирсинг</span>
+                    <span class="rating-pill">★ 5.0</span>
+                </div>
+                <h3 class="card-title">8. Студия татуировки «Ritual Tattoo»</h3>
+                <p class="card-tagline">Авторская татуировка, микрореализм, графика и безопасный пирсинг в центре Челябинска</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Кыштымская, 9а</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Центральный район, отдельный вход</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Вт-Вс: 11:00 – 20:00 (по предварительной записи)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (900) 079-88-11</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8008" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8008</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Мини-тату и тонкие линии (до 5 см)</span>
+                <span class="preview-price">от 3 000 ₽</span>
+            </li>
+            
+            <li>
+                <span>Индивидуальный сеанс татуировки (3-4 часа)</span>
+                <span class="preview-price">8 000 ₽</span>
+            </li>
+            
+            <li>
+                <span>Большой проект (рукав / спина / бедро)</span>
+                <span class="preview-price">от 15 000 ₽/сеанс</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8008" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8008 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/08-ritual-tattoo.html', 'Студия татуировки «Ritual Tattoo»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="pets">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🐾 Уход за питомцами</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">9. Груминг-салон «Яшка»</h3>
+                <p class="card-tagline">Бережная стрижка собак и кошек без стресса и седации на Северо-Западе Челябинска</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, Комсомольский пр., 41б</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Курчатовский район, удобная парковка перед входом</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Ежедневно: 09:30 – 20:30 (по записи)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (950) 744-22-10</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8009" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8009</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Комплекс для мелких пород (шпиц, йорк, мальтезе)</span>
+                <span class="preview-price">1 900 ₽</span>
+            </li>
+            
+            <li>
+                <span>Комплекс для средних пород (корги, спаниель)</span>
+                <span class="preview-price">2 500 ₽</span>
+            </li>
+            
+            <li>
+                <span>Экспресс-линька для крупных собак (хаски, лабрадор)</span>
+                <span class="preview-price">3 200 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8009" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8009 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/09-yashka-groom.html', 'Груминг-салон «Яшка»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="food">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">☕ Бары & Гастрономия</span>
+                    <span class="rating-pill">★ 4.8</span>
+                </div>
+                <h3 class="card-title">10. Крафтовый гастробар «Дабл Эль»</h3>
+                <p class="card-tagline">32 крана авторского пенного, сочные бургеры из мраморной говядины и атмосфера правильного паба</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Красная, 71</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Исторический центр, напротив сквера Алого поля</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Чт: 16:00 – 01:00 | Пт: 15:00 – 03:00 | Сб: 13:00 – 03:00 | Вс: 13:00 – 01:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 223-71-71</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8010" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8010</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Фирменный бургер «Дабл Эль» с беконом</span>
+                <span class="preview-price">590 ₽</span>
+            </li>
+            
+            <li>
+                <span>Свиные ребра BBQ томленые 6 часов</span>
+                <span class="preview-price">680 ₽</span>
+            </li>
+            
+            <li>
+                <span>Сырные подушечки с халапеньо и ягодным дипом</span>
+                <span class="preview-price">410 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8010" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8010 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/10-double-l-bar.html', 'Крафтовый гастробар «Дабл Эль»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="craft">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🎨 Творчество & Обучение</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">11. Арт-студия живописи «Своими руками»</h3>
+                <p class="card-tagline">Уроки рисования для взрослых и детей, картины маслом за 3 часа и арт-вечеринки на Тополинке</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Академика Сахарова, 2</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Микрорайон Тополиная аллея, вход с торца здания</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Вт-Вс: 10:00 – 21:00 (Пн — по записи)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (912) 890-55-44</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8011" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8011</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Арт-вечер «Картина маслом за 3 часа»</span>
+                <span class="preview-price">2 400 ₽</span>
+            </li>
+            
+            <li>
+                <span>Интерьерная картина с золотой поталью</span>
+                <span class="preview-price">2 700 ₽</span>
+            </li>
+            
+            <li>
+                <span>Эпоксидная смола: Срез камня / Часы</span>
+                <span class="preview-price">3 200 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8011" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8011 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/11-svoimi-rukami.html', 'Арт-студия живописи «Своими руками»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="flowers">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">💐 Цветы & Доставка</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">12. Цветочная мастерская «Ботаника & Цветы»</h3>
+                <p class="card-tagline">Авторская флористика, стойкие садовые цветы и оперативная доставка букетов за 60 минут по Челябинску</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Энтузиастов, 14</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Рядом с ЮУрГУ и парком Гагарина</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Круглосуточно: 24/7 (доставка в любое время)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 231-09-90</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8012" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8012</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Авторский букет «Нежное утро»</span>
+                <span class="preview-price">3 200 ₽</span>
+            </li>
+            
+            <li>
+                <span>Композиция в шляпной коробке «Монохром»</span>
+                <span class="preview-price">4 500 ₽</span>
+            </li>
+            
+            <li>
+                <span>Букет гигант «101 пионовидный тюльпан / роза»</span>
+                <span class="preview-price">от 9 900 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8012" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8012 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/12-botanika-flowers.html', 'Цветочная мастерская «Ботаника & Цветы»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="craft">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🎨 Ремонт & Реставрация</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">13. Мастерская реставрации «Уральский Сапожник»</h3>
+                <p class="card-tagline">Премиальная реставрация обуви, сумок и изделий из натуральной кожи с 2011 года</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, пр. Ленина, 54</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Остановка «Центральный рынок», отдельное крыльцо</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Пт: 10:00 – 19:30 | Сб: 11:00 – 17:00 (Вс — выходной)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 233-44-12</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8013" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8013</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Глубокая химчистка обуви (кожа, замша, нубук)</span>
+                <span class="preview-price">от 1 500 ₽</span>
+            </li>
+            
+            <li>
+                <span>Полная перекраска и восстановление цвета кожи</span>
+                <span class="preview-price">от 2 200 ₽</span>
+            </li>
+            
+            <li>
+                <span>Замена подошвы на износостойкую Vibram (Италия)</span>
+                <span class="preview-price">от 3 400 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8013" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8013 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/13-uralskiy-sapozhnik.html', 'Мастерская реставрации «Уральский Сапожник»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="health">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🧘 Спорт & Здоровье</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">14. Пространство йоги и движения «Прана Челябинск»</h3>
+                <p class="card-tagline">Аэройога в гамаках, хатха-йога, здоровая спина и медитации с панорамным видом на реку Миасс</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Труда, 156</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Западный луч, видовой этаж с панорамными окнами</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Пт: 07:30 – 21:30 | Сб-Вс: 09:00 – 19:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 777-90-14</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8014" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8014</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Аэройога в шелковых гамаках (Fly Yoga)</span>
+                <span class="preview-price">750 ₽ / разовое</span>
+            </li>
+            
+            <li>
+                <span>Хатха-йога и пранаяма (для любого уровня)</span>
+                <span class="preview-price">650 ₽ / разовое</span>
+            </li>
+            
+            <li>
+                <span>Программа «Здоровая спина и красивая осанка»</span>
+                <span class="preview-price">700 ₽ / разовое</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8014" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8014 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/14-prana-yoga.html', 'Пространство йоги и движения «Прана Челябинск»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="kids">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">👶 Дети & Развитие</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">15. Детский клуб и продленка «Совёнок»</h3>
+                <p class="card-tagline">Заботливая продленка 1–4 класс, подготовка к школе, робототехника и шахматы на Северо-Западе</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Чичерина, 38в</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Рядом со школами №129, №151 и №152</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Пт: 08:00 – 19:30 (Сб: развивающие студии)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 799-38-00</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8015" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8015</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Продленка «Все включено» (месячный абонемент)</span>
+                <span class="preview-price">14 500 ₽/мес</span>
+            </li>
+            
+            <li>
+                <span>Комплексная подготовка к школе (для детей 5–7 лет)</span>
+                <span class="preview-price">3 800 ₽/мес</span>
+            </li>
+            
+            <li>
+                <span>Робототехника и программирование Lego WeDo</span>
+                <span class="preview-price">3 400 ₽/мес</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8015" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8015 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/15-sovenok-club.html', 'Детский клуб и продленка «Совёнок»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="auto">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🚗 Автодетейлинг</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">16. Детейлинг-центр «AquaShine 74»</h3>
+                <p class="card-tagline">Премиальный детейлинг, керамика 9H, оклейка полиуретановой бронепленкой и наномойка в центре</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Курчатова, 26</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Рядом с развязкой Свердловского проспекта и ул. Воровского</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Ежедневно: 08:30 – 21:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 220-74-74</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8016" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8016</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Трехфазная детейлинг-мойка кузова</span>
+                <span class="preview-price">от 1 600 ₽</span>
+            </li>
+            
+            <li>
+                <span>Глубокая химчистка салона с разбором и озонацией</span>
+                <span class="preview-price">от 7 500 ₽</span>
+            </li>
+            
+            <li>
+                <span>Восстановительная абразивная полировка кузова</span>
+                <span class="preview-price">от 12 000 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8016" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8016 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/16-aquashine74.html', 'Детейлинг-центр «AquaShine 74»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="food">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">☕ Пекарни & Хлеб</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">17. Ремесленная пекарня «Тесто & Подовый»</h3>
+                <p class="card-tagline">Настоящий тартин на живой закваске, подовый хлеб 36 часов брожения и французские круассаны</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Братьев Кашириных, 131</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Калининский район, рядом с ЧелГУ</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Ежедневно: 08:00 – 20:30</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 751-24-90</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8017" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8017</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Хлеб «Тартин Классический» на закваске (650 г)</span>
+                <span class="preview-price">180 ₽</span>
+            </li>
+            
+            <li>
+                <span>Бородинский заварной с кориандром (550 г)</span>
+                <span class="preview-price">150 ₽</span>
+            </li>
+            
+            <li>
+                <span>Багет традиционный французский с хрустом</span>
+                <span class="preview-price">130 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8017" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8017 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/17-testo-podoviy.html', 'Ремесленная пекарня «Тесто & Подовый»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="auto">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🚗 Ремонт техники</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">18. Сервисный центр электроники «ЧелРемонт»</h3>
+                <p class="card-tagline">Срочный ремонт смартфонов iPhone / Android, ноутбуков и планшетов при вас от 20 минут в центре</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Цвиллинга, 34</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Центр, 100 метров от остановки «Площадь Революции»</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Пт: 10:00 – 20:00 | Сб-Вс: 11:00 – 18:00</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 776-34-34</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8018" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8018</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Замена дисплейного модуля iPhone (все модели)</span>
+                <span class="preview-price">от 2 400 ₽</span>
+            </li>
+            
+            <li>
+                <span>Переклейка стекла отдельно (сохранение оригинальной матрицы)</span>
+                <span class="preview-price">от 1 900 ₽</span>
+            </li>
+            
+            <li>
+                <span>Замена аккумулятора повышенной емкости</span>
+                <span class="preview-price">от 1 400 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8018" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8018 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/18-chel-remont.html', 'Сервисный центр электроники «ЧелРемонт»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="pets">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🐾 Ветеринария & Забота</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">19. Ветеринарный кабинет «Добрый Нос»</h3>
+                <p class="card-tagline">Квалифицированная помощь кошкам и собакам, бережная терапия, УЗИ и вакцинация в Челябинске</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Воровского, 60</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Советский район, рядом с Городской больницей №1</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Вс: 09:00 – 21:00 (Экстренный выезд на дом — круглосуточно)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 244-60-60</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8019" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8019</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Первичный терапевтический осмотр и консультация</span>
+                <span class="preview-price">700 ₽</span>
+            </li>
+            
+            <li>
+                <span>Вакцинация импортными вакцинами с занесением в ветпаспорт</span>
+                <span class="preview-price">1 600 ₽</span>
+            </li>
+            
+            <li>
+                <span>УЗИ брюшной полости на экспертном аппарате</span>
+                <span class="preview-price">1 400 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8019" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8019 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/19-dobriy-nos.html', 'Ветеринарный кабинет «Добрый Нос»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-card" data-category="craft">
+            <div class="card-top">
+                <div class="card-meta">
+                    <span class="cat-tag">🎨 Ателье & Стиль</span>
+                    <span class="rating-pill">★ 4.9</span>
+                </div>
+                <h3 class="card-title">20. Швейное ателье и лаборатория стиля «Игла & Шёлк»</h3>
+                <p class="card-tagline">Индивидуальный пошив вечерних платьев, мужских костюмов и безупречная посадка одежды по фигуре</p>
+            </div>
+
+            <div class="card-body">
+                <div class="card-info-row">
+                    <span class="card-info-icon">📍</span>
+                    <div>
+                        <strong>г. Челябинск, ул. Коммуны, 86</strong>
+                        <div style="font-size:0.75rem; color:#64748b;">Золотой квадрат центра, рядом с пешеходной Кировкой</div>
+                    </div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">🕒</span>
+                    <div>Пн-Пт: 10:00 – 20:00 | Сб: 11:00 – 18:00 (Вс — по записи)</div>
+                </div>
+
+                <div class="card-info-row">
+                    <span class="card-info-icon">📞</span>
+                    <div><strong>+7 (351) 263-86-86</strong></div>
+                </div>
+
+                <div class="card-info-row" style="background:#e0f2fe; padding:6px 12px; border-radius:6px; color:#0369a1; font-weight:700;">
+                    <span class="card-info-icon">🌐</span>
+                    <div>Локальный хост: <a href="http://localhost:8020" target="_blank" style="color:#0284c7; text-decoration:underline;">localhost:8020</a></div>
+                </div>
+
+                <div class="card-services-preview">
+                    <div class="preview-header">
+                        <span>Популярные позиции</span>
+                        <span>Прайс</span>
+                    </div>
+                    <ul class="preview-list">
+                        
+            <li>
+                <span>Индивидуальный пошив вечернего или свадебного платья</span>
+                <span class="preview-price">от 9 500 ₽</span>
+            </li>
+            
+            <li>
+                <span>Пошив делового мужского или женского костюма</span>
+                <span class="preview-price">от 18 000 ₽</span>
+            </li>
+            
+            <li>
+                <span>Идеальная подгонка брендовой одежды по фигуре</span>
+                <span class="preview-price">от 900 ₽</span>
+            </li>
+            
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="http://localhost:8020" target="_blank" class="btn-view-site">
+                    Открыть на localhost:8020 ↗
+                </a>
+                <button class="btn-preview" onclick="openPreview('sites/20-igla-shelk.html', 'Швейное ателье и лаборатория стиля «Игла & Шёлк»')">
+                    Быстрый просмотр
+                </button>
+            </div>
+        </div>
+        
+        </div>
+    </main>
+
+    <!-- Quick Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-modal-inner">
+            <div class="preview-modal-bar">
+                <div class="preview-modal-title">
+                    <span id="previewTitle">Просмотр сайта</span>
+                </div>
+                <div class="preview-bar-actions">
+                    <a href="#" target="_blank" id="previewOpenTab" class="btn-open-tab">Открыть в новой вкладке ↗</a>
+                    <button class="btn-close-modal" onclick="closePreview()">×</button>
+                </div>
+            </div>
+            <iframe id="previewIframe" class="preview-iframe" src="about:blank"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+        <p>Проект «20 сайтов для заведений Челябинска». Все страницы полностью автономны и готовы к деплою на любой хостинг или GitHub Pages.</p>
+        <p style="margin-top: 8px;">г. Челябинск, Южный Урал • 2026</p>
+    </footer>
+
+    <script>
+        let currentCategory = 'all';
+
+        function setCategory(cat, btn) {
+            currentCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterSites();
+        }
+
+        function filterSites() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.site-card');
+
+            cards.forEach(card => {
+                const cat = card.getAttribute('data-category');
+                const text = card.innerText.toLowerCase();
+
+                const matchesCat = (currentCategory === 'all' || cat === currentCategory);
+                const matchesQuery = (!query || text.includes(query));
+
+                if (matchesCat && matchesQuery) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openPreview(url, title) {
+            document.getElementById('previewTitle').innerText = title;
+            document.getElementById('previewOpenTab').href = url;
+            document.getElementById('previewIframe').src = url;
+            document.getElementById('previewModal').classList.add('active');
+        }
+
+        function closePreview() {
+            document.getElementById('previewModal').classList.remove('active');
+            document.getElementById('previewIframe').src = 'about:blank';
+        }
+
+        document.getElementById('previewModal').addEventListener('click', function(e) {
+            if (e.target === this) closePreview();
+        });
+    </script>
+</body>
+</html>
