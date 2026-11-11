@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крафтовый гастробар «Дабл Эль» — Официальный сайт | Челябинск</title>
+    <meta name="description" content="32 крана авторского пенного, сочные бургеры из мраморной говядины и атмосфера правильного паба. Адрес в Челябинске: г. Челябинск, ул. Красная, 71. Телефон: +7 (351) 223-71-71">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7f2918;
+            --secondary: #c67d0a;
+            --accent: #f5e6cc;
+            --bg: #1e1410;
+            --dark: #120a07;
+            --text-dark: #1f2937;
+            --text-muted: #6b7280;
+            --white: #ffffff;
+            --border-subtle: rgba(0, 0, 0, 0.08);
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            --card-shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.12), 0 10px 15px -5px rgba(0, 0, 0, 0.05);
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Back to catalog bar */
+        .catalog-banner {
+            background: #111827;
+            color: #f3f4f6;
+            padding: 10px 20px;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1000;
+        }
+        .catalog-banner a {
+            color: #60a5fa;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .catalog-banner a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--dark);
+        }
+        .logo-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-title {
+            font-weight: 800;
+            font-size: 1.15rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+        .logo-city {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 28px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .header-phone {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            text-decoration: none;
+        }
+        .header-phone-val {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+        .header-phone-sub {
+            font-size: 0.72rem;
+            color: #16a34a;
+            font-weight: 600;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        }
+        .btn-primary:hover {
+            opacity: 0.92;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--dark);
+            border: 1px solid var(--border-subtle);
+        }
+        .btn-secondary:hover {
+            background: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            padding: 70px 24px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+            border: 1px solid var(--border-subtle);
+        }
+        .hero-badge .star {
+            color: #eab308;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.85rem;
+            line-height: 1.18;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        .hero p.lead {
+            font-size: 1.18rem;
+            color: #4b5563;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .hero-info-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 24px;
+        }
+        .info-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        .info-pill-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            color: var(--primary);
+        }
+
+        /* Hero Visual Card */
+        .hero-visual-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-visual-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+        .rating-box {
+            background: #fef08a;
+            color: #713f12;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1rem;
+        }
+        .card-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--primary);
+            background: rgba(0, 0, 0, 0.04);
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+        .hero-card-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+        .hero-card-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: #374151;
+        }
+        .hero-card-list li span.check {
+            color: #10b981;
+            font-weight: 800;
+        }
+        .quick-booking-box {
+            background: var(--bg);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: center;
+            border: 1px dashed var(--border-subtle);
+        }
+        .quick-booking-box h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--dark);
+        }
+        .quick-booking-box p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        /* Section wrapper */
+        section {
+            padding: 70px 24px;
+        }
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 50px;
+        }
+        .section-sub {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            display: block;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow-hover);
+            border-color: var(--primary);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+        .feature-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        .feature-card p {
+            font-size: 0.92rem;
+            color: #4b5563;
+            line-height: 1.55;
+        }
+
+        /* Services & Menu */
+        .services-section {
+            background: var(--white);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--bg);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+        .service-card:hover {
+            background: var(--white);
+            box-shadow: var(--card-shadow);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        .service-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .service-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        .service-price {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--primary);
+            white-space: nowrap;
+            background: var(--white);
+            padding: 4px 10px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .service-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+        .service-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 0.88rem;
+            background: transparent;
+            color: var(--dark);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .service-card:hover .service-btn {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* Events / Specials */
+        .events-banner {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 44px;
+            margin-top: 50px;
+        }
+        .events-banner h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        .events-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .event-item {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            padding: 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .event-date {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+        .event-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .review-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-subtle);
+        }
+        .review-stars {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .review-text {
+            font-size: 0.95rem;
+            color: #374151;
+            font-style: italic;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+        .review-author-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 12px;
+        }
+        .review-author {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--dark);
+        }
+        .review-source {
+            font-size: 0.75rem;
+            color: #10b981;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Contacts & Location */
+        .contacts-section {
+            background: var(--white);
+        }
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--primary);
+            flex-shrink: 0;
+            border: 1px solid var(--border-subtle);
+        }
+        .contact-detail h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+        .contact-detail p, .contact-detail a {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+        .contact-detail a:hover {
+            color: var(--primary);
+        }
+        .contact-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: normal !important;
+            margin-top: 2px;
+        }
+
+        /* Simulated Map Card */
+        .map-card {
+            background: #e5e7eb;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 100%;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-subtle);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.7) 0%, rgba(229,231,235,0.9) 100%),
+                linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+            padding: 30px;
+        }
+        .map-badge {
+            align-self: flex-start;
+            background: var(--white);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .map-pin-center {
+            align-self: center;
+            text-align: center;
+            transform: translateY(-10px);
+        }
+        .map-pin {
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: 3px solid var(--white);
+        }
+        .map-pin span {
+            transform: rotate(45deg);
+            font-size: 1.4rem;
+        }
+        .map-label {
+            background: var(--white);
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            color: var(--dark);
+            display: inline-block;
+        }
+        .map-actions {
+            display: flex;
+            gap: 12px;
+        }
+        .map-btn {
+            flex: 1;
+            background: var(--white);
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+        .map-btn:hover {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-content {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 520px;
+            padding: 36px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            position: relative;
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(20px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f3f4f6;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .modal-close:hover {
+            background: #e5e7eb;
+        }
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .modal-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--dark);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background: var(--bg);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #065f46;
+            color: #ecfdf5;
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            z-index: 10001;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            animation: toastSlide 0.3s ease;
+        }
+        .toast.show {
+            display: flex;
+        }
+        @keyframes toastSlide {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #9ca3af;
+            padding: 60px 24px 30px;
+        }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-grid, .contacts-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            nav {
+                display: none;
+            }
+            .header-phone {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bar to main catalog -->
+    <div class="catalog-banner">
+        <span>Проект: 20 сайтов для заведений Челябинска на Localhost</span>
+        <a href="http://localhost:8080">← Каталог всех 20 сайтов (localhost:8080)</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#hero" class="logo-wrap">
+                <div class="logo-badge">☕</div>
+                <div class="logo-text">
+                    <span class="logo-title">Дабл Эль</span>
+                    <span class="logo-city">Челябинск</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги & Меню</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+73512237171" class="header-phone">
+                    <span class="header-phone-val">+7 (351) 223-71-71</span>
+                    <span class="header-phone-sub">Открыто прямо сейчас</span>
+                </a>
+                <button class="btn btn-primary" onclick="openModal()">Забронировать</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="star">★</span> 4.8 в 2ГИС • Премия лучших баров Челябинска
+                </div>
+                <h1>Крафтовый гастробар «Дабл Эль»</h1>
+                <p class="lead">32 крана авторского пенного, сочные бургеры из мраморной говядины и атмосфера правильного паба</p>
+                <div class="hero-btns">
+                    <button class="btn btn-primary" onclick="openModal()">Забронировать столик на вечер</button>
+                    <a href="#services" class="btn btn-secondary">Смотреть меню & цены</a>
+                </div>
+                <div class="hero-info-pills">
+                    <div class="info-pill">
+                        <div class="info-pill-icon">📍</div>
+                        <div>
+                            <div>г. Челябинск, ул. Красная, 71</div>
+                            <div style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">Исторический центр, напротив сквера Алого поля</div>
+                        </div>
+                    </div>
+                    <div class="info-pill">
+                        <div class="info-pill-icon">🕒</div>
+                        <div>
+                            <div>Пн-Чт: 16:00 – 01:00 | Пт: 15:00 – 03:00 | Сб: 13:00 – 03:00 | Вс: 13:00 – 01:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual Card -->
+            <div class="hero-visual-card">
+                <div class="hero-visual-header">
+                    <span class="card-tag">Бары & Гастрономия</span>
+                    <div class="rating-box">★ 4.8 / 5.0</div>
+                </div>
+                <p style="font-size: 1.05rem; font-weight: 600; color: var(--dark); margin-bottom: 18px;">
+                    Место встречи любителей честной кухни и редких сортов от лучших независимых пивоварен России, Бельгии, Германии и Англии.
+                </p>
+                <ul class="hero-card-list">
+                    <li><span class="check">✓</span> <span>Челябинск, подтвержденное качество по отзывам клиентов</span></li>
+                    <li><span class="check">✓</span> <span>Быстрое бронирование онлайн или по прямому телефону</span></li>
+                    <li><span class="check">✓</span> <span>Удобный заезд и парковка</span></li>
+                </ul>
+                <div class="quick-booking-box">
+                    <h4>Нужна быстрая консультация?</h4>
+                    <p>Оставьте номер телефона, перезвоним за 5 минут</p>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="openModal()">Забронировать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-sub">Наши преимущества</span>
+                <h2 class="section-title">Почему челябинцы выбирают нас</h2>
+                <p class="section-desc">Каждый день мы трудимся, чтобы вы получали лучший сервис и результат в Челябинске</p>
+            </div>
+            <div class="features-grid">
+                
+            <div class="feature-card">
+                <div class="feature-icon">🍺</div>
+                <h3>32 поворотных крана</h3>
+                <p>Постоянная ротация эксклюзивных релизов, азотные стауты и свежие фруктовые сауры</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🥩</div>
+                <h3>Собственная коптильня</h3>
+                <p>Коптим брискет, ребра и курицу на натуральной ольховой щепе</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚽</div>
+                <h3>Трансляции на больших экранах</h3>
+                <p>Лига чемпионов, АПЛ и плей-офф КХЛ с поддержкой нашего «Трактора»</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎸</div>
+                <h3>Живой рок и квизы</h3>
+                <p>Интеллектуальные игры по вторникам и живые акустические выступления по пятницам</p>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-sub">Бары & Гастрономия</span>
+                <h2 class="section-title">Кухня и напитки</h2>
+                <p class="section-desc">Актуальные цены, честные порции и профессиональное исполнение</p>
+            </div>
+            <div class="services-grid">
+                
+            <div class="service-card">
+                <div>
+                    <div class="service-head">
+                        <div class="service-title">Фирменный бургер «Дабл Эль» с беконом</div>
+                        <div class="service-price">590 ₽</div>
+                    </div>
+                    <div class="service-desc">Котлета из брянского блэк ангуса, копченый бекон, чеддер, карамелизированный лук, соус барбекю</div>
+                </div>
+                <button class="service-btn" onclick="openModal('Фирменный бургер «Дабл Эль» с беконом')">Выбрать и заказать</button>
+            </div>
+            
+            <div class="service-card">
+                <div>
+                    <div class="service-head">
+                        <div class="service-title">Свиные ребра BBQ томленые 6 часов</div>
+                        <div class="service-price">680 ₽</div>
+                    </div>
+                    <div class="service-desc">Нежнейшее мясо, тающее во рту, фирменная глазурь, картофель фри и битые огурцы</div>
+                </div>
+                <button class="service-btn" onclick="openModal('Свиные ребра BBQ томленые 6 часов')">Выбрать и заказать</button>
+            </div>
+            
+            <div class="service-card">
+                <div>
+                    <div class="service-head">
+                        <div class="service-title">Сырные подушечки с халапеньо и ягодным дипом</div>
+                        <div class="service-price">410 ₽</div>
+                    </div>
+                    <div class="service-desc">Хрустящая панировка, тягучий сыр гауда и пикантная остринка перца</div>
+                </div>
+                <button class="service-btn" onclick="openModal('Сырные подушечки с халапеньо и ягодным дипом')">Выбрать и заказать</button>
+            </div>
+            
+            <div class="service-card">
+                <div>
+                    <div class="service-head">
+                        <div class="service-title">Стейк Денвер с перечным соусом</div>
+                        <div class="service-price">890 ₽</div>
+                    </div>
+                    <div class="service-desc">Сочный стейк зернового откорма прожарки Medium, подается с овощами гриль</div>
+                </div>
+                <button class="service-btn" onclick="openModal('Стейк Денвер с перечным соусом')">Выбрать и заказать</button>
+            </div>
+            
+            <div class="service-card">
+                <div>
+                    <div class="service-head">
+                        <div class="service-title">Дегустационный сет крафта (4 бокала по 150 мл)</div>
+                        <div class="service-price">520 ₽</div>
+                    </div>
+                    <div class="service-desc">Подборка редких сортов IPA, Sour Ale, Imperial Stout или сидра от шеф-бармена</div>
+                </div>
+                <button class="service-btn" onclick="openModal('Дегустационный сет крафта (4 бокала по 150 мл)')">Выбрать и заказать</button>
+            </div>
+            
+            <div class="service-card">
+                <div>
+                    <div class="service-head">
+                        <div class="service-title">Хрустящие крылья Buffalo в глазури</div>
+                        <div class="service-price">450 ₽</div>
+                    </div>
+                    <div class="service-desc">Подаются со свежим сельдереем и сырным соусом Блю Чиз</div>
+                </div>
+                <button class="service-btn" onclick="openModal('Хрустящие крылья Buffalo в глазури')">Выбрать и заказать</button>
+            </div>
+            
+            </div>
+
+            <!-- Events / Special Banner -->
+            <div class="events-banner">
+                <h3>Специальные предложения и события недели</h3>
+                <div class="events-list">
+                    
+            <div class="event-item">
+                <div class="event-date">Каждый вторник, 19:30</div>
+                <div class="event-title">Пивной квиз: битва умов, призовой фонд — пенные ящики</div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">Пятница & Суббота</div>
+                <div class="event-title">DJ-сеты и акустический рок до 3 утра</div>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-sub">Отзывы гостей</span>
+                <h2 class="section-title">Что о нас говорят жители города</h2>
+                <p class="section-desc">Рейтинг 4.8 на основе более 420 реальных отзывов в 2ГИС и Яндекс.Картах</p>
+            </div>
+            <div class="reviews-grid">
+                
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">«Лучший бургер в Челябинске без преувеличения! Булочка мягкая, мясо сочное, соус идеальный. И выбор крана огромный — бармены всегда подскажут сорт по вкусу.»</p>
+                <div class="review-author-wrap">
+                    <span class="review-author">Артем Лихачев</span>
+                    <span class="review-source">✓ Проверено 2ГИС</span>
+                </div>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">«Хорошая атмосфера настоящего паба на Красной. Приятная публика, отличные ребра, всегда показывают матчи Трактора.»</p>
+                <div class="review-author-wrap">
+                    <span class="review-author">Виктор Захаров</span>
+                    <span class="review-source">✓ Проверено 2ГИС</span>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts & Location Section -->
+    <section class="contacts-section" id="contacts">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-sub">Локация</span>
+                <h2 class="section-title">Как нас найти в Челябинске</h2>
+                <p class="section-desc">Ждем вас в гости! Удобный подъезд и транспортная доступность</p>
+            </div>
+            <div class="contacts-grid">
+                <div>
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-detail">
+                                <h4>Точный адрес</h4>
+                                <p>г. Челябинск, ул. Красная, 71</p>
+                                <div class="contact-sub">Исторический центр, напротив сквера Алого поля</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-detail">
+                                <h4>Режим работы</h4>
+                                <p>Пн-Чт: 16:00 – 01:00 | Пт: 15:00 – 03:00 | Сб: 13:00 – 03:00 | Вс: 13:00 – 01:00</p>
+                                <div class="contact-sub">Без перерывов на обед</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-detail">
+                                <h4>Прямой телефон</h4>
+                                <p><a href="tel:+73512237171">+7 (351) 223-71-71</a></p>
+                                <div class="contact-sub">Звоните для брони или справок</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-detail">
+                                <h4>Мессенджеры</h4>
+                                <p style="display:flex; gap: 12px; margin-top: 4px;">
+                                    <a href="https://t.me" target="_blank" style="color:#0284c7;">Telegram</a> •
+                                    <a href="https://vk.com" target="_blank" style="color:#2563eb;">ВКонтакте</a> •
+                                    <a href="https://wa.me" target="_blank" style="color:#16a34a;">WhatsApp</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%;" onclick="openModal()">Забронировать столик на вечер</button>
+                </div>
+
+                <!-- Simulated Map Card -->
+                <div class="map-card">
+                    <div class="map-badge">
+                        <span>📍</span> Дабл Эль на карте Челябинска
+                    </div>
+
+                    <div class="map-pin-center">
+                        <div class="map-pin">
+                            <span>☕</span>
+                        </div>
+                        <div class="map-label">г. Челябинск, ул. Красная, 71</div>
+                    </div>
+
+                    <div class="map-actions">
+                        <a href="https://2gis.ru/chelyabinsk" target="_blank" class="map-btn">Открыть в 2ГИС</a>
+                        <a href="https://yandex.ru/maps" target="_blank" class="map-btn">Яндекс Карты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Крафтовый гастробар «Дабл Эль»</h3>
+                <p>32 крана авторского пенного, сочные бургеры из мраморной говядины и атмосфера правильного паба</p>
+                <p style="margin-top: 14px; color: #d1d5db;">
+                    г. Челябинск • +7 (351) 223-71-71
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">О заведении</a></li>
+                    <li><a href="#services">Услуги и меню</a></li>
+                    <li><a href="#reviews">Отзывы клиентов</a></li>
+                    <li><a href="#contacts">Контакты и адрес</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Проект «20 сайтов Челябинска»</h4>
+                <p style="font-size: 0.88rem; margin-bottom: 12px;">Сайт создан в рамках программы цифровизации малого бизнеса г. Челябинска.</p>
+                <a href="../index.html" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem;">Все 20 сайтов каталога</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 Дабл Эль. Челябинск. Все права защищены.</div>
+            <div>Сделано с любовью к Южному Уралу</div>
+        </div>
+    </footer>
+
+    <!-- Booking / Contact Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3 class="modal-title">Забронировать</h3>
+            <p class="modal-subtitle">Оставьте ваши контакты, и мы свяжемся с вами в течение 5 минут для подтверждения</p>
+            
+            <form id="bookingForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label">Ваше имя</label>
+                    <input type="text" class="form-control" placeholder="Иван Иванов" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Номер телефона</label>
+                    <input type="tel" class="form-control" placeholder="+7 (999) 000-00-00" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Желаемая дата</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Услуга / Столик</label>
+                        <select class="form-control" id="serviceSelect">
+                            <option value="">Выберите услугу...</option>
+                            <option value="Фирменный бургер «Дабл Эль» с беконом">Фирменный бургер «Дабл Эль» с беконом — 590 ₽</option><option value="Свиные ребра BBQ томленые 6 часов">Свиные ребра BBQ томленые 6 часов — 680 ₽</option><option value="Сырные подушечки с халапеньо и ягодным дипом">Сырные подушечки с халапеньо и ягодным дипом — 410 ₽</option><option value="Стейк Денвер с перечным соусом">Стейк Денвер с перечным соусом — 890 ₽</option><option value="Дегустационный сет крафта (4 бокала по 150 мл)">Дегустационный сет крафта (4 бокала по 150 мл) — 520 ₽</option><option value="Хрустящие крылья Buffalo в глазури">Хрустящие крылья Buffalo в глазури — 450 ₽</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Комментарий или пожелание</label>
+                    <textarea class="form-control" rows="2" placeholder="Например: столик у окна или особые пожелания"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span>✅</span>
+        <span id="toastMsg">Спасибо! Ваша заявка успешно отправлена. Менеджер свяжется с вами в течение 5 минут.</span>
+    </div>
+
+    <script>
+        function openModal(serviceName) {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.add('active');
+            if (serviceName) {
+                const select = document.getElementById('serviceSelect');
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].text.includes(serviceName)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+        }
+
+        document.getElementById('bookingModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            closeModal();
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4500);
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
